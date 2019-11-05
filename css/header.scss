@@ -1,0 +1,49 @@
+@import './smart-grid';
+@import './navbar';
+
+header {
+    @include navbar(auto, 1170px, #333);
+
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .header-content {
+        min-height: 90vh;
+        background: linear-gradient(0deg, rgba(40, 7, 103, 0.8), rgba(40, 7, 103, 0.8)), url(../img/chatbot.png) no-repeat center center;
+        background-size: cover;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @include sm-block {
+            min-height: auto;
+            padding: 40px 0;
+        }
+    }
+
+    .page-title {
+        font-size: 50px;
+        line-height: 1.1;
+        text-align: center;
+        letter-spacing: 1px;
+        color: #fff;
+
+
+        @include md-block {
+            font-size: 42px;
+        }
+        @include sm-block {
+            font-size: 35px;
+        }
+        @include xs-block {
+            font-size: 22px;
+        }
+    }
+}
+
+.text-primary {
+    color: #FFE500;
+}
