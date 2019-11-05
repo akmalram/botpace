@@ -1,0 +1,60 @@
+@import './mixins';
+@import './smart-grid';
+
+.advantages {
+    @include content-padding();
+
+    .row {
+        justify-content: space-around;
+        margin-top: 50px;
+    }
+
+    .item {
+        @include col();
+        @include size(12);
+        @include size-xs(24);
+
+        display: flex;
+        max-width: 400px;
+        align-items: center;
+        margin-bottom: 65px;
+
+        .icon {
+            width: 100px;
+            flex-shrink: 0;
+            flex-grow: 0;
+            margin-right: 10px;
+        }
+
+        .title {
+            font-size: 25px;
+            color: #5700FF;
+            margin-bottom: 15px;
+        }
+
+        .text {
+            font-size: 17px;
+        }
+
+        @include xs-block {
+            margin-bottom: 30px;
+
+            .icon {
+                width: 70px;
+            }
+
+            .title {
+                font-size: 19px;
+                margin-bottom: 5px;
+            }
+
+            .text {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.text-secondary {
+    color: #5700FF;
+}

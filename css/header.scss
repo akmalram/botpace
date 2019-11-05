@@ -3,6 +3,7 @@
 
 header {
     @include navbar(auto, 1170px, #333);
+    display: none;
 
     .navbar {
         padding: 10px 0;

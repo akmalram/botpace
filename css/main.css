@@ -1,0 +1,85 @@
+.advantages {
+  padding: 80px 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .advantages {
+    padding: 60px 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .advantages {
+    padding: 30px 0;
+  }
+}
+
+.advantages .row {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 50px;
+}
+
+.advantages .item {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(50% - 30px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 400px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 65px;
+}
+
+@media screen and (max-width: 576px) {
+  .advantages .item {
+    width: calc(100% - 30px);
+  }
+}
+
+.advantages .item .icon {
+  width: 100px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  margin-right: 10px;
+}
+
+.advantages .item .title {
+  font-size: 25px;
+  color: #5700FF;
+  margin-bottom: 15px;
+}
+
+.advantages .item .text {
+  font-size: 17px;
+}
+
+@media screen and (max-width: 576px) {
+  .advantages .item {
+    margin-bottom: 30px;
+  }
+  .advantages .item .icon {
+    width: 70px;
+  }
+  .advantages .item .title {
+    font-size: 19px;
+    margin-bottom: 5px;
+  }
+  .advantages .item .text {
+    font-size: 14px;
+  }
+}
+
+.text-secondary {
+  color: #5700FF;
+}
+/*# sourceMappingURL=main.css.map */
