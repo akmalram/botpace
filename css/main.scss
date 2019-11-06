@@ -3,7 +3,6 @@
 
 .advantages {
     @include content-padding();
-    display: none;
 
     .row {
         justify-content: space-around;
@@ -177,6 +176,143 @@
         }
         .back {
             transform: none;
+        }
+    }
+}
+
+.work-process {
+    @include content-padding();
+
+    .title-primary {
+        text-align: left;
+    }
+
+    .row {
+        padding: 30px 0;
+    }
+
+    .stage {
+        @include col();
+        @include size(6);
+        @include size-md(12);
+        @include size-xs(24);
+
+    }
+
+    .stage-icon {
+        margin-bottom: 30px;
+        position: relative;
+        img {
+            width: 70px;
+        }
+
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 50%;
+            height: 6px;
+            background: rgba(223,229,233,.7);
+            left: 40%;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 5px;
+        }
+    }
+
+    .stage:hover .stage-title {
+        color: #0081ff;
+    }
+
+    .stage-title {
+        font-size: 20px;
+        line-height: 1.4em;
+        margin-bottom: 18px;
+        transition: all .3s;
+        color: #252525;
+        font-family: Montserrat;
+        font-weight: 600;
+    }
+    .stage-text {
+        color: #636363;
+        font-size: 22px;
+        font-weight: 400;
+        letter-spacing: 1px;
+    }
+}
+
+.valuation {
+    @include content-padding();
+    .row {
+        margin-top: 50px;
+    }
+    .left, .right {
+        @include col();
+        @include size(12);
+        @include size-sm(24);
+    }
+
+    .left {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 30px;
+
+        img {
+            width: 400px;
+        }
+    }
+
+
+    &-icon {
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &-item {
+        padding: 30px 0;
+        padding-left: 100px;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    &-title {
+        color: #252525;
+        font-size: 20px;
+        line-height: 1.4em;
+        transition: all .3s;
+        font-family: Montserrat;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+
+    &-desc {
+        color: #636363;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 28px;
+    }
+
+    // Media queries
+
+    @include sm-block {
+        .left {
+            justify-content: center;
+        }
+
+        &-icon {
+            width: 60px;
+            height: 60px;
+        }
+
+        &-item {
+            padding: 20px 0;
+            padding-left: 80px;
         }
     }
 }
