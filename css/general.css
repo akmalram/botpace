@@ -225,7 +225,7 @@ img {
 .btn-primary {
   display: inline-block;
   padding: 10px 30px;
-  background: #333;
+  background: #5700FF;
   border-radius: 5px;
   font-size: 18px;
   color: #fff;
@@ -236,7 +236,7 @@ img {
 }
 
 .btn-primary:hover, .btn-primary:focus {
-  background: #5a5656;
+  background: rgba(85, 0, 255, 0.616);
   outline: none;
 }
 /*# sourceMappingURL=general.css.map */

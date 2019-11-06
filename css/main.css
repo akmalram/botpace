@@ -1,5 +1,6 @@
 .advantages {
   padding: 80px 0;
+  display: none;
 }
 
 @media only screen and (max-width: 768px) {
@@ -81,5 +82,152 @@
 
 .text-secondary {
   color: #5700FF;
+}
+
+.catalog {
+  padding: 80px 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .catalog {
+    padding: 60px 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .catalog {
+    padding: 30px 0;
+  }
+}
+
+.catalog .row {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 40px;
+}
+
+.catalog .card {
+  max-width: 90%;
+  width: 300px;
+  height: 500px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  text-align: center;
+  border-radius: 5px;
+  color: #fff;
+  position: relative;
+  -webkit-perspective: 1500px;
+          perspective: 1500px;
+}
+
+.catalog .card:hover .front {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.catalog .card:hover .back {
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+
+.catalog .title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.catalog .front, .catalog .back {
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  transition: -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+  -webkit-box-shadow: 0 1.5rem 5rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1.5rem 5rem rgba(0, 0, 0, 0.2);
+}
+
+.catalog .front {
+  background: #ebebeb;
+  color: #333;
+  padding-top: 20px;
+}
+
+.catalog .back {
+  position: relative;
+  background: #fff;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.catalog .back .img {
+  height: 200px;
+  background: -webkit-gradient(linear, left top, right bottom, from(#0183fc), to(#5643fa)), url(../img/bot.jpg) no-repeat center center;
+  background: linear-gradient(to right bottom, #0183fc, #5643fa), url(../img/bot.jpg) no-repeat center center;
+  background-size: cover;
+  background-blend-mode: screen;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.catalog .back .title {
+  position: absolute;
+  text-align: right;
+  text-transform: uppercase;
+  color: white;
+  top: 140px;
+  right: 10px;
+  font-weight: lighter;
+  font-size: 21px;
+}
+
+.catalog .back .title span {
+  padding: 5px;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(41, 152, 255, 0.8)), to(rgba(86, 67, 250, 0.8)));
+  background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.8), rgba(86, 67, 250, 0.8));
+}
+
+.catalog .back p {
+  font-size: 19px;
+}
+
+.catalog .back ul {
+  list-style: none;
+  text-align: center;
+  color: #777;
+  padding-bottom: 1rem;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.catalog .back li {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.catalog .back li:not(:last-of-type) {
+  border-bottom: 1px solid #eeee;
+}
+
+@media screen and (max-width: 768px) {
+  .catalog:hover .back, .catalog:hover .front {
+    -webkit-transform: none;
+            transform: none;
+  }
+  .catalog .front {
+    display: none;
+  }
+  .catalog .back {
+    -webkit-transform: none;
+            transform: none;
+  }
 }
 /*# sourceMappingURL=main.css.map */

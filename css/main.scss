@@ -3,6 +3,7 @@
 
 .advantages {
     @include content-padding();
+    display: none;
 
     .row {
         justify-content: space-around;
@@ -57,4 +58,125 @@
 
 .text-secondary {
     color: #5700FF;
+}
+
+.catalog {
+    @include content-padding();
+
+    .row {
+        justify-content: space-around;
+        margin-top: 40px;
+    }
+
+
+    .card {
+        max-width: 90%;
+        width: 300px;
+        height: 500px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+        text-align: center;
+        border-radius: 5px;
+        color: #fff;
+        position: relative;
+
+        perspective: 1500px;
+
+        &:hover .front {
+            transform: rotateY(180deg);
+        }
+
+        &:hover .back {
+            transform: rotateY(0deg);
+        }
+    }
+
+    .title {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .front, .back {
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        position: absolute;
+        backface-visibility: hidden;
+        transition: transform 1s ease-in-out;
+        box-shadow: 0 1.5rem 5rem rgba($color: #000000, $alpha: 0.2);
+    }
+
+    .front {
+        background: rgb(235, 235, 235);
+        color: #333;
+        padding-top: 20px;
+    }
+
+    .back {
+        position: relative;
+        background: #fff;
+        transform: rotateY(180deg);
+
+        .img {
+            height: 200px;
+            background: linear-gradient(to right bottom,#0183fc,#5643fa), url(../img/bot.jpg) no-repeat center center;
+            background-size: cover;
+            background-blend-mode: screen;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+
+        .title {
+            position: absolute;
+            text-align: right;
+            text-transform: uppercase;
+            color: white;
+            top: 140px;
+            right: 10px;
+            font-weight: lighter;
+            font-size: 21px;
+
+            span {
+                padding: 5px;
+                box-decoration-break: clone;
+                background-image: linear-gradient(to right bottom,rgba(41,152,255,.8),rgba(86,67,250,.8));
+            }
+        }
+
+
+        p {
+            font-size: 19px;
+        }
+
+        ul {
+            list-style: none;
+            text-align: center;
+            color: #777;
+            padding-bottom: 1rem;
+            width: 80%;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+        li {
+            padding: 10px;
+            font-size: 16px;
+
+            &:not(:last-of-type) {
+                border-bottom: 1px solid #eeee;
+            }
+        }
+    }
+
+    @include sm-block {
+        &:hover .back, &:hover .front {
+            transform: none;
+        }
+        .front {
+            display: none;
+        }
+        .back {
+            transform: none;
+        }
+    }
 }
